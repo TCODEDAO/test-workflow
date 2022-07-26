@@ -1,0 +1,48 @@
+<div class="page-content">
+  <div class="container-fluid p-5 py-3">
+    <div class="row" style="margin-top: 60px">
+      <%videos.forEach((video,index)=>{%>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <a
+            href="#"
+            onclick="window.history.pushState(null,'<%=video.title%>','/video/<%=video.slug%>')"
+            class="card card-video border-0 bg-transparent mb-4"
+          >
+        <div class="img-hover-container">
+          <div style="position: relative; width: 100%; padding-top: 56.25%">
+            <img
+              src="<%=video.previewImage%>"
+              class="img-hover-effect"
+              style="
+                position: absolute;
+                width: auto;
+                max-height: 100%;
+                left: 50%;
+                top: 50%;
+                height: 100%;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+              "
+              alt=""
+            />
+          </div>
+          <div class="show-title">
+            <img
+              src="/static/images/play-icon.png"
+              style="z-index: 999"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="card-video-details d-flex mt-2">
+          
+            <div>
+              <p><%= video.title %></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <% })%>
+    </div>
+  </div>
+</div>

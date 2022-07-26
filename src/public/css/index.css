@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.img-hover-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.img-hover-effect:hover {
+  transition: 1s;
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.img-hover-effect:hover + .show-title {
+  opacity: 0.9;
+  display: flex;
+  transition: 1.2s;
+}
+
+.show-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: black;
+  display: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.img-hover-container {
+  position: relative;
+  overflow: hidden;
+}
+.video-containter {
+  font-weight: normal;
+  text-transform: capitalize;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 5px 5%;
+}
+.video-heading {
+  font-size: 40px;
+  color: #444;
+  text-align: center;
+  padding: 10px;
+}
+.video-containter .main-video {
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.video-containter .main-video video {
+  width: 100%;
+  border-radius: 6px;
+}
+.video-title {
+  color: #333;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 16px;
+}
+.video-containter .video-list {
+  background: #fff;
+  border-radius: 6px;
+  height: 520px;
+  overflow-y: scroll;
+}
+.video-containter .video-list .video-list-child video {
+  width: 100px;
+  border-radius: 6px;
+}
+.video-containter .video-list .video-list-child {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.video-containter .video-list .video-list-child:hover {
+  background: #eee;
+}
+
+.video-containter .video-list::-webkit-scrollbar {
+  width: 7.8px;
+}
+.video-containter .video-list .video-list-child .video-title {
+  color: #333;
+  font-size: 12px;
+}
+.video-containter .video-list::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 50px;
+}
+.video-containter .video-list::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+}
